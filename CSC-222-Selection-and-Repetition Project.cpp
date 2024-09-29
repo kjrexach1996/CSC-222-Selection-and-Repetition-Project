@@ -16,13 +16,42 @@ int main()
     file_2.open("file2.txt");
     output_file.open("orderedList.txt");
 
+    getline(file_1, name_1);
+    getline(file_2, name_2);
+
+    while (!file_1.eof() || !file_2.eof())
+    {
+        
+        if (name_1 < name_2)
+        {
+            output_file << name_1 << "\n";
+            if (getline(file_1, name_1))
+            { 
+                cout << name_1 << endl;
+                continue;
+            }
+                
+        }
+        else
+        {
+            output_file << name_2 << "\n";
+            if (getline(file_2, name_2))
+                continue;
+        }
+            
+    while (!file_1.eof())
+    {
+        output_file << name_1 << "\n";
+        getline(file_1, name_1);
+    }
+
+    while (!file_2.eof())
+    {
+        output_file << name_2 << "\n";
+        getline(file_2, name_2);
+    }
     
-    getline(cin, name_1);
-    getline(cin, name_2);
-    cout << name_1 << endl;
-    cout << name_2 << endl;
-   
-    
+
     file_1.close();
     file_2.close();
     output_file.close();
