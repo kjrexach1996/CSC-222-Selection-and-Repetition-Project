@@ -1,5 +1,5 @@
-// CSC-222-Selection-and-Repetition Project.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+// This program mimics the functions of a calculator to perform operations between two integers,
+// using a switch statement instead of nested if statements.
 
 #include <iostream>
 using namespace std;
