@@ -19,7 +19,7 @@ int main()
 	file_2.open("file2.txt");
 	output_file.open("final_list.txt");
 
-	//Gets very first line from each input file file
+	//Gets very first line from each input file
 	getline(file_1, name_1);
 	getline(file_2, name_2);
 
